@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Pizzaria em java" />
+    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Pizzaria em java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +22,13 @@
   </component>
   <component name="Git.Settings">
     <branch-grouping />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="2NndiMPkZAyFQlokYYtNH7hGwTj" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -36,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "JAva",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680303905946</updated>
       <workItem from="1680303907116" duration="6253000" />
-      <workItem from="1681091709879" duration="12410000" />
+      <workItem from="1681091709879" duration="13020000" />
     </task>
     <task id="LOCAL-00001" summary="Pizzaria em java">
       <created>1681144377704</created>
