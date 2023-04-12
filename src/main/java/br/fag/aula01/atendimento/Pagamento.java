@@ -5,7 +5,6 @@ import java.util.Date;
 public class Pagamento{
 
     private static String tipo;
-
     public static String getTipo() {
         return tipo;
     }
@@ -44,5 +43,9 @@ public class Pagamento{
 
     private static Date DataVencimento;
 
+    private static String CPF;
+    private static String ChaveAleatoria;
+    private static String Numero;
+    private static String email;
     public Pagamento(){}
 }
