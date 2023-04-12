@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoRefri.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoSuco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoAgua.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/TipoPagto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/types/TipoPagto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/Bebidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/Bebidas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/controller/ControllBebidas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/controller/ControllBebidas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/SaborDoce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/types/SaborDoce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/SaborSalgada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/types/SaborSalgada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoRefri.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoRefri.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoSuco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/bebidas/types/TipoSuco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681338642627</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit">
+      <created>1681340022193</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681340022193</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

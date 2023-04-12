@@ -1,10 +1,9 @@
 package br.fag.aula01.bebidas.types;
 
 public enum TipoSuco {
-        COCA_COLA(3.50f, "Coca Cola"),
-        PESPI(2.40F, "Pepsi"),
-        FANTA_LARANJA(3.50f, "Fanta Laranja"),
-        GUARANA(2.50f, "Guarana");
+        DEL_VALE_LARANJA(1.50f, "Del Vale Laranja"),
+        KAPPO(2.40F, "Kappo"),
+        DEL_VALE_UVA(2.50f, "Del Vale Uva");
 
         private final float valordoSuco;
         private final String nomedoSuco;
@@ -13,7 +12,7 @@ public enum TipoSuco {
             this.nomedoSuco = nomedoSuco;
         }
 
-        public float getValordoSabor(){
+        public float getValordoSuco(){
             return valordoSuco;
         }
         public String getNomedoSuco(){

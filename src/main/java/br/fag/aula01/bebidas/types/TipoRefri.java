@@ -13,7 +13,7 @@ public enum TipoRefri {
         this.nomedoRefri = nomedoRefri;
     }
 
-    public float getValordoSabor(){
+    public float getValordoRefri(){
         return valordoRefri;
     }
     public String nomedoRefri(){
