@@ -51,7 +51,7 @@ public class ControllerCliente {
                     break;
             }
         }else if(leitor == 2){
-            int leitor2;
+            int leitor3;
 
             Scanner inputCartao = new Scanner(System.in);
             Cliente.getPagamento();
@@ -61,20 +61,20 @@ public class ControllerCliente {
             switch (tipo){
                 case 1:
                     System.out.print("Informe o número do cartão: ");
-                    Integer leitor2 = inputCartao.nextInt();
+                    leitor3 = inputCartao.nextInt();
                     pagamento.setTipo("Débito");
-                    pagamento.setNumeroCartao(String.valueOf(leitor2));
+                    pagamento.setNumeroCartao(String.valueOf(leitor3));
                     usuario.setPagamento(pagamento);
                     break;
                 case 2:
                     System.out.print("Informe o número do cartão: ");
-                    leitor2 = inputCartao.nextInt();
+                    leitor3 = inputCartao.nextInt();
                     pagamento.setTipo("Crédito");
-                    pagamento.setNumeroCartao(String.valueOf(leitor2));
+                    pagamento.setNumeroCartao(String.valueOf(leitor3));
                     usuario.setPagamento(pagamento);
                     System.out.print("Informe o CVA: ");
-                    leitor2 = inputCartao.nextInt();
-                    pagamento.setCVA((leitor2));
+                    leitor3 = inputCartao.nextInt();
+                    pagamento.setCVA((leitor3));
                     break;
             }
         }else{
