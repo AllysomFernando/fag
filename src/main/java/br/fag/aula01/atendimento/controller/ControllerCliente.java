@@ -1,4 +1,7 @@
-package br.fag.aula01.atendimento;
+package br.fag.aula01.atendimento.controller;
+
+import br.fag.aula01.atendimento.Cliente;
+import br.fag.aula01.atendimento.Pagamento;
 
 import java.util.Calendar;
 import java.util.Scanner;
@@ -25,9 +28,6 @@ public class ControllerCliente {
             Cliente.getPagamento();
 
             Dados();
-
-
-
             System.out.println("Selecione o tipo de pagamento: ");
             System.out.println("1 Débito \n2 Crédito \n3 Pix\n");
             tipo = inputUser.nextInt();
@@ -51,7 +51,32 @@ public class ControllerCliente {
                     break;
             }
         }else if(leitor == 2){
+            int leitor3;
+
+            Scanner inputCartao = new Scanner(System.in);
+            Cliente.getPagamento();
+            tipo = inputUser.nextInt();
             DadosBalcao();
+
+            switch (tipo){
+                case 1:
+                    System.out.print("Informe o número do cartão: ");
+                    leitor3 = inputCartao.nextInt();
+                    pagamento.setTipo("Débito");
+                    pagamento.setNumeroCartao(String.valueOf(leitor3));
+                    usuario.setPagamento(pagamento);
+                    break;
+                case 2:
+                    System.out.print("Informe o número do cartão: ");
+                    leitor3 = inputCartao.nextInt();
+                    pagamento.setTipo("Crédito");
+                    pagamento.setNumeroCartao(String.valueOf(leitor3));
+                    usuario.setPagamento(pagamento);
+                    System.out.print("Informe o CVA: ");
+                    leitor3 = inputCartao.nextInt();
+                    pagamento.setCVA((leitor3));
+                    break;
+            }
         }else{
 
         }
@@ -95,7 +120,5 @@ public class ControllerCliente {
         return decodedPeriod;
     }
 
-    public static void printarTela(){
 
-    }
 }
