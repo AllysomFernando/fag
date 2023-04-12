@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Pagamento{
 
-    private static Enum tipo;
+    private static String tipo;
 
-    public static Enum getTipo() {
+    public static String getTipo() {
         return tipo;
     }
 
-    public static void setTipo(Enum tipo) {
+    public static void setTipo(String tipo) {
         Pagamento.tipo = tipo;
     }
 
