@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Commit" />
+    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/controller/controllerPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/ControllerCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/controller/ControllerCliente.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +81,7 @@
       <module name="aula-fag" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="br.fag.aula01.atendimento.*" />
+          <option name="PATTERN" value="br.fag.aula01.atendimento.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,7 +102,7 @@
       <workItem from="1681091709879" duration="13020000" />
       <workItem from="1681147151055" duration="275000" />
       <workItem from="1681147441213" duration="19463000" />
-      <workItem from="1681322387434" duration="2553000" />
+      <workItem from="1681322387434" duration="4785000" />
     </task>
     <task id="LOCAL-00001" summary="Pizzaria em java">
       <created>1681144377704</created>
@@ -120,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681324905186</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit">
+      <created>1681324959711</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681324959711</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
