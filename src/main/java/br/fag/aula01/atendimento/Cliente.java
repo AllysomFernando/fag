@@ -2,6 +2,7 @@ package br.fag.aula01.atendimento;
 import java.util.Scanner;
 import java.util.Calendar;
 
+
 public class Cliente{
     private static String nome;
     private static String telefone;
@@ -52,6 +53,7 @@ public class Cliente{
     public static void outPut() {
         Scanner inputUser = new Scanner(System.in);
         int leitor;
+        int tipo;
         Cliente Usuario;
 
         Calendar time = Calendar.getInstance();
@@ -63,9 +65,22 @@ public class Cliente{
         if(leitor == 1){
             Usuario = new Cliente();
             Usuario.Dados();
+            System.out.println("Selecione o tipo de pagamento: ");
+            System.out.println("1 Débito \n2 Crédito \n3 Pix\n");
+            tipo = inputUser.nextInt();
+            switch (tipo){
+                case 1:
+                    System.out.print("Informe o número do cartão: ");
+                    Usuario.setNumeroCartao(new Pagamento());
+                    Usuario.getNumeroCartao().setTipo("Débito");
+                    Usuario.getNumeroCartao().setNumeroCartao(scanner.nextLine());
+                    break;
+            }
         }else if(leitor == 2){
             Usuario = new Cliente();
             Usuario.DadosBalcao();
+        }else{
+
         }
     }
 
@@ -75,15 +90,15 @@ public class Cliente{
     private static void Dados(){
         Scanner leitorNome = new Scanner(System.in);
         System.out.println("Qual seria o seu nome para colocar no pedido: ");
-        nome = leitorNome.nextLine();
+        setNome(leitorNome.nextLine());
         System.out.println("Qual seria o telefone para contato: ");
-        telefone = leitorNome.nextLine();
+        setTelefone(leitorNome.nextLine());
         System.out.println("Qual seria o bairro para entrega: ");
-        bairro = leitorNome.nextLine();
+        setBairro(leitorNome.nextLine());
         System.out.println("Qual seria a rua para entrega: ");
-        rua = leitorNome.nextLine();
+        setRua(leitorNome.nextLine());
         System.out.println("Qual seria o numero da casa para entrega: ");
-        numero = leitorNome.nextLine();
+        setNumero(leitorNome.nextLine());
     }
 
     private static void DadosBalcao(){

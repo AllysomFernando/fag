@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Pizzaria em java">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/Pagamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/TipoPagto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/SaborDoce.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/SaborSalgada.java" afterDir="false" />
+    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Pizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/Pizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/status/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/Cliente.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Class" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -98,7 +90,7 @@
       <workItem from="1680303907116" duration="6253000" />
       <workItem from="1681091709879" duration="13020000" />
       <workItem from="1681147151055" duration="275000" />
-      <workItem from="1681147441213" duration="16661000" />
+      <workItem from="1681147441213" duration="19463000" />
     </task>
     <task id="LOCAL-00001" summary="Pizzaria em java">
       <created>1681144377704</created>
@@ -107,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681144377704</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <created>1681309544199</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681309544199</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +125,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Pizzaria em java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pizzaria em java" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
