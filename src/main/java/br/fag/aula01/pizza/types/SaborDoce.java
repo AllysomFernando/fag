@@ -1,4 +1,4 @@
-package br.fag.aula01.pizza;
+package br.fag.aula01.pizza.types;
 
 public enum SaborDoce {
         CHOCOLATE_COM_MORANGO  (5.50f, "Chocolate Com Morango"),

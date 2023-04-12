@@ -1,5 +1,7 @@
 package br.fag.aula01.pizza;
 
+import br.fag.aula01.pizza.types.SaborDoce;
+import br.fag.aula01.pizza.types.SaborSalgada;
 import br.fag.aula01.status.Status;
 
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ import java.util.List;
 public class Pizza {
     private String nome;
     private Status sabor;
-    private Float preco;
+    private Float valordoSabor;
 
     private List<SaborSalgada> sabores;
     private List<SaborDoce> saboresDoces;

@@ -1,4 +1,4 @@
-package br.fag.aula01.pizza;
+package br.fag.aula01.pizza.types;
 
 public enum SaborSalgada {
         PEPERONI  (1.50f, "Peperoni"),
@@ -21,24 +21,6 @@ public enum SaborSalgada {
         LOMBO_COM_ABACAXI (3.40f, "Lombo Com Abacaxi"),
 
         BACON_COM_MILHO (2.50f, "Bacon com Milho");
-
-
-
-
-    /*Sabores de Pizzas Salgadas:
-
-
-Chocolate com Morango (chocolate, morangos fatiados)
-Banana com Canela (banana em rodelas, canela)
-Romeu e Julieta (goiabada, queijo mussarela)
-Brigadeiro (brigadeiro, chocolate granulado)
-Nutella com Morango (Nutella, morangos fatiados)
-Coco com Leite Condensado (coco ralado, leite condensado)
-Prestígio (chocolate, coco ralado)
-Sensação (chocolate, morangos fatiados, raspas de chocolate)
-Doce de Leite com Amendoim (doce de leite, amendoim triturado)
-Maçã com Canela (maçã fatiada, canela)*/
-
 
 
         private final float valordoSabor;
