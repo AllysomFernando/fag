@@ -6,7 +6,6 @@ import br.fag.aula01.bebidas.controller.ControllBebidas;
 
 public class Main {
     public static void main(String[] args) {
-        //ControllerCliente.outPut();
-        ControllBebidas.outputBebidas();
+        ControllerCliente.outPut();
     }
 }

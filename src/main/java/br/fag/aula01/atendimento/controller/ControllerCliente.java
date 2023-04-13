@@ -13,35 +13,42 @@ public class ControllerCliente {
     private static final Cliente cliente = new Cliente();
 
     public static void outPut() {
-        int leitorTipoRetirada = getTipoRetirada();
 
-        if (leitorTipoRetirada == 1) { // Delivery
-            cliente.setPagamento(getPagamento());
-            setDadosCliente();
+        int LeitorTipo;
 
-        } else if (leitorTipoRetirada == 2) { // Retirada Balcao
-            setDadosClienteBalcao();
-            cliente.setPagamento(getPagamento());
+        System.out.println("Qual seria o tipo de retirada?");
+        System.out.println("1 - Delivery");;
+        System.out.println("2 - Retirada Balcão");
+        System.out.println("3 - La Carte");
+        LeitorTipo = inputScanner.nextInt();
 
-        } else { // La Carte
+        switch (LeitorTipo) {
+            case 1:
+                setDadosCliente();
+                Cliente.setPagamento(getPagamento());
+                break;
+            case 2:
+                setBalcao();
+                Cliente.setPagamento(getPagamento());
+                break;
+            case 3:
 
+            default:
+                System.out.println("Opção inválida.");
         }
-
     }
 
-    private static int getTipoRetirada() {
+   /* private static int getTipoRetirada() {
         Calendar time = Calendar.getInstance();
         System.out.println(decodePeriod(time));
 
-        System.out.println("Qual seria o tipo de retirada?");
-        System.out.println("1 - Delivery");
-        System.out.println("2 - Retirada Balcão");
-        System.out.println("3 - La Carte");
+
 
         return inputScanner.nextInt();
-    }
+    }*/
 
     private static Pagamento getPagamento() {
+
         int leitorTipoPagamento;
 
         System.out.println("Selecione o tipo de pagamento:");
@@ -53,24 +60,75 @@ public class ControllerCliente {
 
         switch (leitorTipoPagamento) {
             case 1:
-                return criarPagamento("Débito");
+              return criarPagamento("Débito");
             case 2:
-                Pagamento pagamento = criarPagamento("Crédito");
-                System.out.print("Informe o CVA: ");
-                pagamento.setCVA(inputScanner.nextInt());
-                return pagamento;
-            default:
+                return criarPagamento("Crédito");
+            case 3:
                 return criarPagamento("Pix");
+            default:
+                System.out.println("Opção inválida.");
+               return null;
         }
+
     }
 
     private static Pagamento criarPagamento(String tipo) {
-        System.out.print("Informe o número do cartão: ");
-        String numeroCartao = inputScanner.next();
+
+        if(tipo == "Débito"){
+
+            System.out.print("Informe o número do cartão: ");
+            Pagamento.setNumeroCartao(inputScanner.next());
+            System.out.print("Informe o CVA: ");
+            Pagamento.setCVA(inputScanner.nextInt());
+            System.out.print("Informe a data de vencimento: ");
+            Pagamento.setDataVencimento(inputScanner.nextInt());
+
+        }else if(tipo == "Crédito"){
+
+            System.out.print("Informe o número do cartão: ");
+            Pagamento.setNumeroCartao(inputScanner.next());
+            System.out.print("Informe o CVA: ");
+            Pagamento.setCVA(inputScanner.nextInt());
+            System.out.print("Informe a data de vencimento: ");
+            Pagamento.setDataVencimento(inputScanner.nextInt());
+
+        } else if (tipo == "Pix") {
+
+            int Leitor;
+            System.out.println("Selecione o tipo de chave:");
+            System.out.println("1 - CPF");
+            System.out.println("2 - Chave Aleatoria");
+            System.out.println("3 - Número");
+            System.out.println("4 - E-mail");
+            Leitor = Integer.parseInt(inputScanner.next());
+            switch (Leitor) {
+                case 1:
+                    System.out.println("Informe seu CPF:");
+                    Pagamento.setCPF(inputScanner.next());
+                    break;
+                case 2:
+                    System.out.println("Informe a sua chave aleatória:");
+                    Pagamento.setChaveAleatoria(inputScanner.next());
+                    break;
+                case 3:
+                    System.out.println("Informe o seu número de telefone:");
+                    Pagamento.setNumero(inputScanner.next());
+                    break;
+                case 4:
+                    System.out.println("Informe o seu E-mail:");
+                    Pagamento.setEmail(inputScanner.next());
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+                    return null;
+            }
+        }else{
+            System.out.printf("Nenhuma opção válida");
+        }
+
 
         Pagamento pagamento = new Pagamento();
-        pagamento.setTipo(tipo);
-        pagamento.setNumeroCartao(numeroCartao);
+        Pagamento.setTipo(tipo);
 
         return pagamento;
     }
@@ -88,7 +146,7 @@ public class ControllerCliente {
         cliente.setNumero(inputScanner.next());
     }
 
-    private static void setDadosClienteBalcao() {
+    private static void setBalcao() {
         System.out.print("Qual seria o seu nome para colocar no pedido: ");
         cliente.setNome(inputScanner.next());
         System.out.print("Qual seria o telefone para contato: ");
@@ -107,6 +165,4 @@ public class ControllerCliente {
         }
         return decodedPeriod;
     }
-
-
 }

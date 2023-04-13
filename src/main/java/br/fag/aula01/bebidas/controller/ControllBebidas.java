@@ -12,9 +12,6 @@ import br.fag.aula01.bebidas.types.TipoSuco;
 
 public class ControllBebidas {
     private static final Scanner scanner = new Scanner(System.in);
-    private static final Pagamento pagamento = new Pagamento();
-    private static final Cliente cliente = new Cliente();
-
 
     public static void outputBebidas() {
         Bebidas bebidas = new Bebidas();
@@ -39,11 +36,19 @@ public class ControllBebidas {
                 break;
             case 2:
                 System.out.println("Selecione o tipo da água:");
-                Arrays.stream(TipoAgua.values()).forEach(System.out::println);
+                for(TipoAgua tipoAgua: bebidas.getTipoAgua()){
+                    System.out.printf("%d - %s\n",tipoAgua.ordinal()+1,tipoAgua.getNomedaAgua());
+                }
+                leitor = scanner.nextInt();
+                bebidas.setTipo(String.valueOf(leitor));
                 break;
             case 3:
                 System.out.println("Selecione o tipo do suco:");
-                Arrays.stream(TipoSuco.values()).forEach(System.out::println);
+                for(TipoSuco tipoSuco: bebidas.getTipoSuco()){
+                    System.out.printf("%d - %s\n",tipoSuco.ordinal()+1,tipoSuco.getNomedoSuco());
+                }
+                leitor = scanner.nextInt();
+                bebidas.setTipo(String.valueOf(leitor));
                 break;
             case 4:
                 System.out.println("Ok, a opção de selecionar nenhuma bebida é válida.");

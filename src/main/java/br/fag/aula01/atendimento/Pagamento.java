@@ -1,7 +1,5 @@
 package br.fag.aula01.atendimento;
 
-import java.util.Date;
-
 public class Pagamento{
 
     private static String tipo;
@@ -29,11 +27,11 @@ public class Pagamento{
         Pagamento.CVA = CVA;
     }
 
-    public static Date getDataVencimento() {
+    public static int getDataVencimento() {
         return DataVencimento;
     }
 
-    public static void setDataVencimento(Date dataVencimento) {
+    public static void setDataVencimento(int dataVencimento) {
         DataVencimento = dataVencimento;
     }
 
@@ -41,11 +39,44 @@ public class Pagamento{
 
     private static Integer CVA;
 
-    private static Date DataVencimento;
+    private static int DataVencimento;
 
     private static String CPF;
-    private static String ChaveAleatoria;
-    private static String Numero;
+    private static String chaveAleatoria;
+    private static String numero;
     private static String email;
+
+    public static String getCPF() {
+        return CPF;
+    }
+
+    public static void setCPF(String CPF) {
+        Pagamento.CPF = CPF;
+    }
+
+    public static String getChaveAleatoria() {
+        return chaveAleatoria;
+    }
+
+    public static void setChaveAleatoria(String chaveAleatoria) {
+        Pagamento.chaveAleatoria = chaveAleatoria;
+    }
+
+    public static String getNumero() {
+        return numero;
+    }
+
+    public static void setNumero(String numero) {
+        Pagamento.numero = numero;
+    }
+
+    public static String getEmail() {
+        return email;
+    }
+
+    public static void setEmail(String email) {
+        Pagamento.email = email;
+    }
+
     public Pagamento(){}
 }

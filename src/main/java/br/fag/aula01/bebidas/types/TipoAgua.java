@@ -14,7 +14,7 @@ public enum TipoAgua {
         public float getValordaAgua(){
             return valordaAgua;
         }
-        public String nomedaAgua(){
+        public String getNomedaAgua(){
             return nomedaAgua;
         }
     }
