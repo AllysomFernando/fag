@@ -3,6 +3,8 @@ package br.fag.aula01.atendimento.controller;
 import br.fag.aula01.atendimento.Cliente;
 import br.fag.aula01.atendimento.Pagamento;
 import br.fag.aula01.bebidas.controller.ControllBebidas;
+import br.fag.aula01.helpers.ValorTotal;
+import br.fag.aula01.pizza.controller.ControllerPizza;
 
 import java.util.Calendar;
 import java.util.Scanner;
@@ -16,6 +18,8 @@ public class ControllerCliente {
         Calendar time = Calendar.getInstance();
         System.out.println(decodePeriod(time));
 
+        ValorTotal valorTotal = new ValorTotal();
+
         int LeitorTipo;
 
         System.out.println("Qual seria o tipo de retirada?");
@@ -27,10 +31,17 @@ public class ControllerCliente {
         switch (LeitorTipo) {
             case 1:
                 setDadosCliente();
+                ControllerPizza.adicionarPizza();
+                ControllBebidas.outputBebidas();
+
+                System.out.println("O valor total do pedido é: " + valorTotal.getValorTotal() + "R$ \n");
                 Cliente.setPagamento(getPagamento());
                 break;
             case 2:
                 setBalcao();
+                ControllerPizza.adicionarPizza();
+                ControllBebidas.outputBebidas();
+                System.out.println("O valor total do pedido é" + valorTotal.getValorTotal() + "R$ \n");
                 Cliente.setPagamento(getPagamento());
                 break;
             case 3:

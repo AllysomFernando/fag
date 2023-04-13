@@ -19,4 +19,6 @@ public enum TipoRefri {
     public String getNomedoRefri(){
         return nomedoRefri;
     }
+
+
 }

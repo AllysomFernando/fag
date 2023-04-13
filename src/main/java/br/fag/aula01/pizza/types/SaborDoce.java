@@ -34,7 +34,7 @@ public enum SaborDoce {
         public String getNomedaPizza(){
             return nomedaPizza;
         }
-    }
+}
 
 
 

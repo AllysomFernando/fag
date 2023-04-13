@@ -7,7 +7,6 @@ import br.fag.aula01.pizza.controller.ControllerPizza;
 
 public class Main {
     public static void main(String[] args) {
-        //ControllerCliente.outPut();
-        ControllerPizza.adicionarPizza();
+        ControllerCliente.outPut();
     }
 }

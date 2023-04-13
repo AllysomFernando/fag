@@ -8,8 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
-    private String nome;
-    private Float valordoSabor;
 
     private List<SaborSalgada> sabores;
     private List<SaborDoce> saboresDoces;
@@ -30,15 +28,13 @@ public Pizza(){
         return this.saboresDoces;
     }
 
+
     public List<SaborSalgada> getSaboresSalgada(){
         return this.sabores;
     }
-    public String getNome() {
-        return nome;
-    }
+
 
     public void setNome(String nome) {
-        this.nome = nome;
     }
 
 }
