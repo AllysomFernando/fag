@@ -119,7 +119,6 @@ public class ControllerCliente {
             System.out.printf("Nenhuma opção válida");
         }
 
-
         Pagamento pagamento = new Pagamento();
         Pagamento.setTipo(tipo);
 

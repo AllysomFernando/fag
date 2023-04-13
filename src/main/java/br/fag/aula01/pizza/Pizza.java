@@ -1,5 +1,6 @@
 package br.fag.aula01.pizza;
 
+import br.fag.aula01.bebidas.types.TipoRefri;
 import br.fag.aula01.pizza.types.SaborDoce;
 import br.fag.aula01.pizza.types.SaborSalgada;
 
@@ -14,20 +15,24 @@ public class Pizza {
     private List<SaborDoce> saboresDoces;
 
 
-    public List<SaborSalgada> getSaboresSalgada(){
-        this.sabores = new ArrayList<>();
-        this.sabores.addAll(List.of(SaborSalgada.values()));
-        return this.sabores;
-    }
+
+
+
+
+public Pizza(){
+    this.saboresDoces = new ArrayList<>();
+    this.saboresDoces.addAll(List.of(SaborDoce.values()));
+    this.sabores = new ArrayList<>();
+    this.sabores.addAll(List.of(SaborSalgada.values()));
+}
 
     public List<SaborDoce> getSaboresDoces(){
-        this.sabores = new ArrayList<>();
-        this.saboresDoces.addAll(List.of(SaborDoce.values()));
         return this.saboresDoces;
     }
 
-public Pizza(){}
-
+    public List<SaborSalgada> getSaboresSalgada(){
+        return this.sabores;
+    }
     public String getNome() {
         return nome;
     }
