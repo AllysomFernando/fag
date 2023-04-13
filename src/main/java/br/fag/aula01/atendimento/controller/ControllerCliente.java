@@ -13,6 +13,8 @@ public class ControllerCliente {
     private static final Cliente cliente = new Cliente();
 
     public static void outPut() {
+        Calendar time = Calendar.getInstance();
+        System.out.println(decodePeriod(time));
 
         int LeitorTipo;
 
@@ -37,15 +39,6 @@ public class ControllerCliente {
                 System.out.println("Opção inválida.");
         }
     }
-
-   /* private static int getTipoRetirada() {
-        Calendar time = Calendar.getInstance();
-        System.out.println(decodePeriod(time));
-
-
-
-        return inputScanner.nextInt();
-    }*/
 
     private static Pagamento getPagamento() {
 
