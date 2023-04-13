@@ -5,6 +5,6 @@ public enum Status {
     ANDAMENTO,
     CONCLUIDO,
     CANCELADO,
-    SAlGADA
+    SAlGADA;
 }
 

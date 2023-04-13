@@ -16,7 +16,7 @@ public enum TipoRefri {
     public float getValordoRefri(){
         return valordoRefri;
     }
-    public String nomedoRefri(){
+    public String getNomedoRefri(){
         return nomedoRefri;
     }
 }

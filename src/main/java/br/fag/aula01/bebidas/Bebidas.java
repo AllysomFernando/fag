@@ -1,6 +1,10 @@
 package br.fag.aula01.bebidas;
 
+import br.fag.aula01.bebidas.types.TipoAgua;
 import br.fag.aula01.bebidas.types.TipoRefri;
+import br.fag.aula01.bebidas.types.TipoSuco;
+import br.fag.aula01.pizza.types.SaborDoce;
+import br.fag.aula01.pizza.types.SaborSalgada;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,19 +18,31 @@ public class Bebidas {
 
     private static String marca;
 
-    private List<TipoRefri> bebidas;
 
-    public List<TipoRefri> getTipoBebidas(){
-        this.bebidas = new ArrayList<>();
-        this.bebidas.addAll(List.of(TipoRefri.values()));
-        return this.bebidas;
+    private List<TipoRefri> refri;
+
+
+    private List<TipoSuco> suco;
+
+    private List<TipoAgua> agua;
+
+    public Bebidas(){
+        this.refri = new ArrayList<>();
+        this.refri.addAll(List.of(TipoRefri.values()));
+        this.suco = new ArrayList<>();
+        this.suco.addAll(List.of(TipoSuco.values()));
+        this.agua = new ArrayList<>();
+        this.agua.addAll(List.of(TipoAgua.values()));
     }
-
-
-
-
-
-
+    public List<TipoRefri> getTipoRefri(){
+        return refri;
+    }
+    public List<TipoSuco> getTipoSuco(){
+        return suco;
+    }
+    public List<TipoAgua> getTipoAgua(){
+        return agua;
+    }
 
 
 

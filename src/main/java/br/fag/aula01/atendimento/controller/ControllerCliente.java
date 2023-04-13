@@ -2,109 +2,97 @@ package br.fag.aula01.atendimento.controller;
 
 import br.fag.aula01.atendimento.Cliente;
 import br.fag.aula01.atendimento.Pagamento;
+import br.fag.aula01.bebidas.controller.ControllBebidas;
 
 import java.util.Calendar;
 import java.util.Scanner;
 
 public class ControllerCliente {
-    static Pagamento pagamento = new Pagamento();
-    static Cliente usuario = new Cliente();
+    private static final Scanner inputScanner = new Scanner(System.in);
+    private static final Pagamento pagamento = new Pagamento();
+    private static final Cliente cliente = new Cliente();
+
     public static void outPut() {
+        int leitorTipoRetirada = getTipoRetirada();
 
-        Scanner inputUser = new Scanner(System.in);
-        int leitor;
-        int tipo;
+        if (leitorTipoRetirada == 1) { // Delivery
+            cliente.setPagamento(getPagamento());
+            setDadosCliente();
 
+        } else if (leitorTipoRetirada == 2) { // Retirada Balcao
+            setDadosClienteBalcao();
+            cliente.setPagamento(getPagamento());
 
+        } else { // La Carte
+
+        }
+
+    }
+
+    private static int getTipoRetirada() {
         Calendar time = Calendar.getInstance();
-        System.out.print(decodePeriod(time));
-        System.out.println("Qual seria o tipo de retirada? \n");
-        System.out.println("1 Delivery \n2 Retirada Balcao \n3 La Carte\n");
-        leitor = inputUser.nextInt();
+        System.out.println(decodePeriod(time));
 
-        if(leitor == 1){
-            int leitor2;
-            Scanner inputCartao = new Scanner(System.in);
-            Cliente.getPagamento();
+        System.out.println("Qual seria o tipo de retirada?");
+        System.out.println("1 - Delivery");
+        System.out.println("2 - Retirada Balcão");
+        System.out.println("3 - La Carte");
 
-            Dados();
-            System.out.println("Selecione o tipo de pagamento: ");
-            System.out.println("1 Débito \n2 Crédito \n3 Pix\n");
-            tipo = inputUser.nextInt();
-            switch (tipo){
-                case 1:
-                    System.out.print("Informe o número do cartão: ");
-                    leitor2 = inputCartao.nextInt();
-                    pagamento.setTipo("Débito");
-                    pagamento.setNumeroCartao(String.valueOf(leitor2));
-                    usuario.setPagamento(pagamento);
-                    break;
-                case 2:
-                    System.out.print("Informe o número do cartão: ");
-                    leitor2 = inputCartao.nextInt();
-                    pagamento.setTipo("Crédito");
-                    pagamento.setNumeroCartao(String.valueOf(leitor2));
-                    usuario.setPagamento(pagamento);
-                    System.out.print("Informe o CVA: ");
-                    leitor2 = inputCartao.nextInt();
-                    pagamento.setCVA((leitor2));
-                    break;
-            }
-        }else if(leitor == 2){
-            int leitor3;
+        return inputScanner.nextInt();
+    }
 
-            Scanner inputCartao = new Scanner(System.in);
-            Cliente.getPagamento();
-            tipo = inputUser.nextInt();
-            DadosBalcao();
+    private static Pagamento getPagamento() {
+        int leitorTipoPagamento;
 
-            switch (tipo){
-                case 1:
-                    System.out.print("Informe o número do cartão: ");
-                    leitor3 = inputCartao.nextInt();
-                    pagamento.setTipo("Débito");
-                    pagamento.setNumeroCartao(String.valueOf(leitor3));
-                    usuario.setPagamento(pagamento);
-                    break;
-                case 2:
-                    System.out.print("Informe o número do cartão: ");
-                    leitor3 = inputCartao.nextInt();
-                    pagamento.setTipo("Crédito");
-                    pagamento.setNumeroCartao(String.valueOf(leitor3));
-                    usuario.setPagamento(pagamento);
-                    System.out.print("Informe o CVA: ");
-                    leitor3 = inputCartao.nextInt();
-                    pagamento.setCVA((leitor3));
-                    break;
-            }
-        }else{
+        System.out.println("Selecione o tipo de pagamento:");
+        System.out.println("1 - Débito");
+        System.out.println("2 - Crédito");
+        System.out.println("3 - Pix");
 
+        leitorTipoPagamento = inputScanner.nextInt();
+
+        switch (leitorTipoPagamento) {
+            case 1:
+                return criarPagamento("Débito");
+            case 2:
+                Pagamento pagamento = criarPagamento("Crédito");
+                System.out.print("Informe o CVA: ");
+                pagamento.setCVA(inputScanner.nextInt());
+                return pagamento;
+            default:
+                return criarPagamento("Pix");
         }
     }
 
+    private static Pagamento criarPagamento(String tipo) {
+        System.out.print("Informe o número do cartão: ");
+        String numeroCartao = inputScanner.next();
 
+        Pagamento pagamento = new Pagamento();
+        pagamento.setTipo(tipo);
+        pagamento.setNumeroCartao(numeroCartao);
 
-    public ControllerCliente(){}
-    private static void Dados(){
-        Scanner leitorNome = new Scanner(System.in);
-        System.out.println("Qual seria o seu nome para colocar no pedido: ");
-        usuario.setNome(leitorNome.nextLine());
-        System.out.println("Qual seria o telefone para contato: ");
-        usuario.setTelefone(leitorNome.nextLine());
-        System.out.println("Qual seria o bairro para entrega: ");
-        usuario.setBairro(leitorNome.nextLine());
-        System.out.println("Qual seria a rua para entrega: ");
-        usuario.setRua(leitorNome.nextLine());
-        System.out.println("Qual seria o numero da casa para entrega: ");
-        usuario.setNumero(leitorNome.nextLine());
+        return pagamento;
     }
 
-    private static void DadosBalcao(){
-        Scanner leitorNome = new Scanner(System.in);
-        System.out.println("Qual seria o seu nome para colocar no pedido: ");
-        usuario.setNome(leitorNome.nextLine());
-        System.out.println("Qual seria o telefone para contato: ");
-        usuario.setTelefone(leitorNome.nextLine());
+    private static void setDadosCliente() {
+        System.out.print("Qual seria o seu nome para colocar no pedido: ");
+        cliente.setNome(inputScanner.next());
+        System.out.print("Qual seria o telefone para contato: ");
+        cliente.setTelefone(inputScanner.next());
+        System.out.print("Qual seria o bairro para entrega: ");
+        cliente.setBairro(inputScanner.next());
+        System.out.print("Qual seria a rua para entrega: ");
+        cliente.setRua(inputScanner.next());
+        System.out.print("Qual seria o numero da casa para entrega: ");
+        cliente.setNumero(inputScanner.next());
+    }
+
+    private static void setDadosClienteBalcao() {
+        System.out.print("Qual seria o seu nome para colocar no pedido: ");
+        cliente.setNome(inputScanner.next());
+        System.out.print("Qual seria o telefone para contato: ");
+        cliente.setTelefone(inputScanner.next());
     }
 
     public static String decodePeriod(final Calendar time) {
