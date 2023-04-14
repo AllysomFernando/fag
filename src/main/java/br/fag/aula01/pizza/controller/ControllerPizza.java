@@ -20,162 +20,125 @@ public class ControllerPizza {
         int leitor;
 
 
-            System.out.println("Qual seria o tamanho da pizza  ?\n");
-            System.out.println("1 - Pequena");
-            System.out.println("2 - Média");
-            System.out.println("3 - Grande");
-            System.out.println("4 - Gigante");
+        System.out.println("Qual seria o tamanho da pizza  ?\n");
+        System.out.println("1 - Pequena");
+        System.out.println("2 - Média");
+        System.out.println("3 - Grande");
 
-            leitor = scanner.nextInt();
+        leitor = scanner.nextInt();
 
-            ArrayList <Float> valoresSabor = new ArrayList<Float>();
-            ArrayList <String> saboresPizza = new ArrayList<String>();
+        ArrayList <Float> valoresSabor = new ArrayList<Float>();
+        ArrayList <String> saboresPizza = new ArrayList<String>();
 
-            switch (leitor) {
-                        case 1:
+        switch (leitor) {
+            case 1:
 
-                            int leitor2;
+                int leitor2;
 
-                            System.out.println("Selecionado pizza Pequena, pode selecionar somente 1 sabor:");
-                            System.out.println("Selecionar sabor?\n");
-                            System.out.println("1 - Doce");
-                            System.out.println("2 - Salgada");
-                            leitor2 = scanner.nextInt();
+                System.out.println("Selecionado pizza Pequena, pode selecionar somente 1 sabor:");
+                System.out.println("Selecionar sabor?\n");
+                System.out.println("1 - Doce");
+                System.out.println("2 - Salgada");
+                leitor2 = scanner.nextInt();
 
-                            if (leitor2 == 1) {
+                if (leitor2 == 1) {
 
-                                for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
-                                    System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
-                                    valoresSabor.add(saborDoce.getValordoSabor());
-                                }
-
-                                leitor2 = scanner.nextInt();
-
-                                valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 10);
-
-                            } else {
-                                for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
-                                    System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
-                                    valoresSabor.add(saborSalgada.getValordoSabor());
-                                }
-                                leitor2 = scanner.nextInt();
-
-                                valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 4);
-                            }
-                            pizza.setNome(String.valueOf(leitor));
-                            break;
-
-                        case 2:
-
-                            int quantidade = 0;
-
-
-
-
-                            System.out.println("Selecionado pizza Média, pode selecionar somente 2 sabores:");
-
-                            while(quantidade < 2){
-
-                                System.out.println("Selecionar sabor?\n");
-                                System.out.println("1 - Doce");
-                                System.out.println("2 - Salgada");
-                                leitor2 = scanner.nextInt();
-
-                                if (leitor2 == 1) {
-                                    for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
-                                        System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
-                                        valoresSabor.add(saborDoce.getValordoSabor());
-                                        saboresPizza.add(saborDoce.getNomedaPizza());
-                                    }
-                                        quantidade += saboresPizza.size() - 9;
-                                } else {
-                                    for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
-                                        System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
-                                        valoresSabor.add(saborSalgada.getValordoSabor());
-                                        saboresPizza.add(saborSalgada.getNomedaPizza());
-                                    }
-                                        quantidade += saboresPizza.size() - 20;
-                                }
-                                valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 8);
-                                leitor = scanner.nextInt();
-                                pizza.setNome(String.valueOf(leitor));
-                            }
-
-                            break;
-
-                        case 3:
-                            quantidade = 0;
-
-                            System.out.println("Selecionado pizza Grande, pode selecionar somente 3 sabores:");
-                            System.out.println("Selecionar sabor?\n");
-
-                            while(quantidade < 3) {
-
-                                System.out.println("1 - Doce");
-                                System.out.println("2 - Salgada");
-                                leitor2 = scanner.nextInt();
-
-                                if (leitor2 == 1) {
-                                    for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
-                                        System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
-                                        valoresSabor.add(saborDoce.getValordoSabor());
-                                        saboresPizza.add(saborDoce.getNomedaPizza());
-                                    }
-                                     quantidade += saboresPizza.size() - 10;
-                                } else {
-                                    for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
-                                        System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
-                                        valoresSabor.add(saborSalgada.getValordoSabor());
-                                        saboresPizza.add(saborSalgada.getNomedaPizza());
-                                    }
-                                    quantidade += saboresPizza.size() - 21;
-                                }
-
-                                valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 12);
-                                leitor = scanner.nextInt();
-                                pizza.setNome(String.valueOf(leitor));
-
-                                break;
-                            }
-                        case 4:
-                            System.out.println("Selecionado pizza Grande, pode selecionar somente 4 sabores:");
-
-                            quantidade = 0;
-
-                            while(quantidade < 3) {
-
-                                System.out.println("Selecionar sabor?\n");
-                                System.out.println("1 - Doce");
-                                System.out.println("2 - Salgada");
-                                leitor2 = scanner.nextInt();
-
-                                if (leitor2 == 1) {
-                                    for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
-                                        System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
-                                        valoresSabor.add(saborDoce.getValordoSabor());
-                                        saboresPizza.add(saborDoce.getNomedaPizza());
-                                    }
-                                    quantidade += saboresPizza.size() - 11;
-                                } else {
-                                    for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
-                                        System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
-                                        valoresSabor.add(saborSalgada.getValordoSabor());
-                                        saboresPizza.add(saborSalgada.getNomedaPizza());
-                                    }
-                                    quantidade += saboresPizza.size() - 22;
-                                }
-
-                                valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 16);
-                                leitor = scanner.nextInt();
-                                pizza.setNome(String.valueOf(leitor));
-
-                                break;
-                            }
-                        default:
-                            System.out.println("Opção inválida.");
-                            break;
+                    for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
+                        System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
+                        valoresSabor.add(saborDoce.getValordoSabor());
                     }
-                }
-            }
 
+                    leitor2 = scanner.nextInt();
+
+                    valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 8);
+
+                } else {
+                    for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
+                        System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
+                        valoresSabor.add(saborSalgada.getValordoSabor());
+                    }
+                    leitor2 = scanner.nextInt();
+
+                    valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 4);
+                }
+                pizza.setNome(String.valueOf(leitor));
+                break;
+
+            case 2:
+
+                int quantidade = 0;
+
+
+                System.out.println("Selecionado pizza Média, pode selecionar somente 2 sabores:");
+
+                while(quantidade <= 2){
+
+                    System.out.println("Selecionar sabor?\n");
+                    System.out.println("1 - Doce");
+                    System.out.println("2 - Salgada");
+                    leitor2 = scanner.nextInt();
+
+                    if (leitor2 == 1) {
+                        for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
+                            System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
+                            valoresSabor.add(saborDoce.getValordoSabor());
+                            saboresPizza.add(saborDoce.getNomedaPizza());
+                        }
+                        quantidade += saboresPizza.size() - 9;
+                    } else {
+                        for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
+                            System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
+                            valoresSabor.add(saborSalgada.getValordoSabor());
+                            saboresPizza.add(saborSalgada.getNomedaPizza());
+                        }
+                        quantidade += saboresPizza.size() - 20;
+                    }
+                    valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 10);
+                    leitor = scanner.nextInt();
+                    pizza.setNome(String.valueOf(leitor));
+                }
+
+                break;
+
+            case 3:
+
+                quantidade = 0;
+                System.out.println("Selecionado pizza Grande, pode selecionar somente 3 sabores:");
+                    while(quantidade <= 3) {
+                        System.out.println("Selecionar sabor?\n");
+                        System.out.println("1 - Doce");
+                        System.out.println("2 - Salgada");
+                        leitor2 = scanner.nextInt();
+
+                        if (leitor2 == 1) {
+                            for (SaborDoce saborDoce : pizza.getSaboresDoces()) {
+                                System.out.printf("%d - %s\n", saborDoce.ordinal() + 1, saborDoce.getNomedaPizza());
+                                valoresSabor.add(saborDoce.getValordoSabor());
+                                saboresPizza.add(saborDoce.getNomedaPizza());
+                            }
+                            quantidade += saboresPizza.size() - 10;
+
+                        } else {
+                            for (SaborSalgada saborSalgada : pizza.getSaboresSalgada()) {
+                                System.out.printf("%d - %s\n", saborSalgada.ordinal() + 1, saborSalgada.getNomedaPizza());
+                                valoresSabor.add(saborSalgada.getValordoSabor());
+                                saboresPizza.add(saborSalgada.getNomedaPizza());
+                            }
+                            quantidade += saboresPizza.size() - 21;
+                        }
+
+                        valorTotal.setValorTotal(valoresSabor.get((leitor2 - 1)) * 12);
+                        leitor = scanner.nextInt();
+                        pizza.setNome(String.valueOf(leitor));
+                    }
+
+                    break;
+
+
+            default:
+                System.out.println("Opção inválida.");
+                break;
+        }
+    }
+}
 

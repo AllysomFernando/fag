@@ -27,11 +27,11 @@ public class Pagamento{
         Pagamento.CVA = CVA;
     }
 
-    public static int getDataVencimento() {
+    public static String getDataVencimento() {
         return DataVencimento;
     }
 
-    public static void setDataVencimento(int dataVencimento) {
+    public static void setDataVencimento(String  dataVencimento) {
         DataVencimento = dataVencimento;
     }
 
@@ -39,7 +39,7 @@ public class Pagamento{
 
     private static Integer CVA;
 
-    private static int DataVencimento;
+    private static String DataVencimento;
 
     private static String CPF;
     private static String chaveAleatoria;
