@@ -33,7 +33,6 @@ public class ControllerCliente {
                 setDadosCliente();
                 ControllerPizza.adicionarPizza();
                 ControllBebidas.outputBebidas();
-
                 System.out.println("O valor total do pedido é: " + valorTotal.getValorTotal() + "R$ \n");
                 Cliente.setPagamento(getPagamento());
                 break;
@@ -41,7 +40,7 @@ public class ControllerCliente {
                 setBalcao();
                 ControllerPizza.adicionarPizza();
                 ControllBebidas.outputBebidas();
-                System.out.println("O valor total do pedido é" + valorTotal.getValorTotal() + "R$ \n");
+                System.out.println("O valor total do pedido é: " + valorTotal.getValorTotal() + "R$ \n");
                 Cliente.setPagamento(getPagamento());
                 break;
             case 3:
@@ -71,9 +70,10 @@ public class ControllerCliente {
                 return criarPagamento("Pix");
             default:
                 System.out.println("Opção inválida.");
-               return null;
+               getPagamento();
         }
 
+        return null;
     }
 
     private static Pagamento criarPagamento(String tipo) {
