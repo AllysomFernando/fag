@@ -29,9 +29,7 @@ public class Bagagem {
         return bilhete;
     }
 
-    public void setBilhete(String bilhete) {
-        this.bilhete = bilhete;
-    }
+
 
     private String codigo;
     private String tipo;
