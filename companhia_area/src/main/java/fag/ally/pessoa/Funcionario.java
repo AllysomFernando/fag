@@ -10,4 +10,5 @@ public class Funcionario extends Pessoa {
     public Funcionario(String codigo, String nome, String email, String telefone, LocalDate nascimento, String rg, String cpf, String endereco) {
         super(codigo, nome, email, telefone, nascimento, rg, cpf, endereco);
     }
+
 }
