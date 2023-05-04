@@ -1,14 +1,98 @@
 package fag.ally.pessoa;
-
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Pessoa {
-    public String getCodigo() {
-        return codigo;
+    private String codigo;
+    private String nome;
+    private String email;
+    private String telefone;
+    private LocalDate nascimento;
+    private String rg;
+    private String cpf;
+    private String endereco;
+
+    public Pessoa(String codigo, String nome, String email, String telefone, LocalDate nascimento, String rg, String cpf, String endereco) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.nascimento = nascimento;
+        this.rg = rg;
+        this.cpf = cpf;
+        this.endereco = endereco;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void lerNome() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o nome:");
+        String nome = scanner.nextLine();
+        setNome(nome);
+    }
+
+    public void lerEmail() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o email:");
+        String email = scanner.nextLine();
+        setEmail(email);
+    }
+
+    public void lerTelefone() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o telefone:");
+        String telefone = scanner.nextLine();
+        setTelefone(telefone);
+    }
+
+    public void lerData() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite a data de nascimento (no formato yyyy-MM-dd):");
+        LocalDate date = LocalDate.parse(scanner.nextLine());
+        setNascimento(date);
+    }
+
+    public void lerRg() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o RG:");
+        String rg = scanner.nextLine();
+        setRg(rg);
+    }
+
+    public void lerCpf() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o CPF:");
+        String cpf = scanner.nextLine();
+        setCpf(cpf);
+    }
+
+    public void lerEndereco() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o endereço:");
+        String endereco = scanner.nextLine();
+        setEndereco(endereco);
+    }
+
+    private static String gerarCodigo() {
+        Random geradorAleatorio = new Random();
+        return String.valueOf(geradorAleatorio.nextInt(100));
+    }
+
+    public static Pessoa gerarPessoa(){
+        String codigo = gerarCodigo();
+        Pessoa pessoa = new Pessoa(codigo, null, null, null, null, null, null, null);
+        pessoa.lerNome();
+        pessoa.lerEmail();
+        pessoa.lerTelefone();
+        pessoa.lerData();
+        pessoa.lerRg();
+        pessoa.lerCpf();
+        pessoa.lerEndereco();
+        return pessoa;
+    }
+
+    public String getCodigo() {
+        return codigo;
     }
 
     public String getNome() {
@@ -35,14 +119,6 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
-    public Date getNascimento() {
-        return nascimento;
-    }
-
-    public void setNascimento(Date nascimento) {
-        this.nascimento = nascimento;
-    }
-
     public String getRg() {
         return rg;
     }
@@ -66,20 +142,13 @@ public class Pessoa {
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+    public LocalDate getNascimento() {
+        return nascimento;
+    }
 
-    private String codigo;
+    public void setNascimento(LocalDate nascimento) {
+        this.nascimento = nascimento;
+    }
 
-    private String nome;
 
-    private String email;
-
-    private String telefone;
-
-    private Date nascimento;
-
-    private String rg;
-
-    private String cpf;
-
-    private String endereco;
 }
