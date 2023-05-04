@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Commit" />
+    <list default="true" id="56162c5f-6741-4c27-8404-6e49c8169806" name="Changes" comment="Commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companhia_area/src/main/java/fag/ally/bilhete/Bagagem.java" beforeDir="false" afterPath="$PROJECT_DIR$/companhia_area/src/main/java/fag/ally/bilhete/Bagagem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companhia_area/src/main/java/fag/ally/bilhete/Bilhete.java" beforeDir="false" afterPath="$PROJECT_DIR$/companhia_area/src/main/java/fag/ally/bilhete/Bilhete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companhia_area/src/main/java/fag/ally/bilhete/SituacaoBilhete.java" beforeDir="false" afterPath="$PROJECT_DIR$/companhia_area/src/main/java/fag/ally/bilhete/SituacaoBilhete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/Pagamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/atendimento/TipoPagto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/Pizza.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/SaborDoce.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/pizza/SaborSalgada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/fag/aula01/status/Status.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +37,7 @@
     <branch-grouping />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="4b97c4e0c9db10aa91e4d79f0dfaee5964eb8997" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +70,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;JAva&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CompanhiaAerea&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/lyo/Documents/GitHub/POO/aula-fag&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -97,6 +111,8 @@
       <workItem from="1681091709879" duration="13020000" />
       <workItem from="1681147151055" duration="275000" />
       <workItem from="1681147441213" duration="19463000" />
+      <workItem from="1683155634689" duration="40000" />
+      <workItem from="1683155689455" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Pizzaria em java">
       <created>1681144377704</created>

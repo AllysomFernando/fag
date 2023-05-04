@@ -1,12 +1,16 @@
 package fag.ally.bilhete;
 
 public class Bilhete {
+
+    SituacaoBilhete situacaoBilhete = new SituacaoBilhete();
     private int numero;
     private String assento;
 
     private String passageiro;
 
     private String horario;
+
+
 
     public int getNumero() {
         return numero;
@@ -39,16 +43,5 @@ public class Bilhete {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-
-    public String getSituacao() {
-        return situacao;
-    }
-
-    public void setSituacao(String situacao) {
-        this.situacao = situacao;
-    }
-
-    private String situacao;
-
 
 }
