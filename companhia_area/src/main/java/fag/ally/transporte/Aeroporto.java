@@ -1,6 +1,10 @@
 package fag.ally.transporte;
 
 public class Aeroporto {
+
+    private String codigo;
+    private String descricao;
+    private String sigla;
     public String getCodigo() {
         return codigo;
     }
@@ -25,7 +29,5 @@ public class Aeroporto {
         this.sigla = sigla;
     }
 
-    private String codigo;
-    private String descricao;
-    private String sigla;
+
 }
