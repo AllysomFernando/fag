@@ -44,4 +44,19 @@ public class Bilhete {
         this.horario = horario;
     }
 
+
+
+    //escolhe um assento, horario, destino,
+
+
+
+
+
+
+
+
+
+
+
+
 }
