@@ -33,11 +33,11 @@ public class Horario {
     }
 
     public static LocalDate gerarDataAleatoria() {
-        LocalDate dataInicial = LocalDate.of(2023, 1, 30);
-        LocalDate dataFinal = LocalDate.of(2023, 12, 30);
-        long dias = ChronoUnit.DAYS.between(dataInicial, dataFinal);
+        LocalDate dataPartida = LocalDate.of(2023, 1, 30);
+        LocalDate dataChegada = LocalDate.of(2023, 12, 30);
+        long dias = ChronoUnit.DAYS.between(dataPartida, dataChegada);
         long diasAleatorios = ThreadLocalRandom.current().nextLong(dias + 1);
-        return dataInicial.plusDays(diasAleatorios);
+        return dataPartida.plusDays(diasAleatorios);
     }
 
 
