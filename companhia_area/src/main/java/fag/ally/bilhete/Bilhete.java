@@ -1,55 +1,16 @@
 package fag.ally.bilhete;
 
-import java.util.Random;
-import java.util.Scanner;
-
-
-
 public class Bilhete {
 
-    private static final Scanner inputScanner = new Scanner(System.in);
-
-
-
-
-
-    public static void comprar(){
-
-        int LeitorTipo;
-
-        Random gerador = new Random();
-
-        System.out.println("Qual vai ser o tipo de pagamento");
-
-        System.out.println("1 - Débito");
-        System.out.println("2 - Crédito");
-        System.out.println("3 - PIX");
-
-        LeitorTipo = inputScanner.nextInt();
-
-        System.out.println("Pagamento realizado!");
-
-        System.out.println("O numero do assento é: " + gerador.nextInt(40));
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
+    SituacaoBilhete situacaoBilhete = new SituacaoBilhete();
     private int numero;
     private String assento;
 
     private String passageiro;
 
     private String horario;
+
+
 
     public int getNumero() {
         return numero;
@@ -83,14 +44,19 @@ public class Bilhete {
         this.horario = horario;
     }
 
-    public String getSituacao() {
-        return situacao;
-    }
 
-    public void setSituacao(String situacao) {
-        this.situacao = situacao;
-    }
 
-    private String situacao;
+    //escolhe um assento, horario, destino,
+
+
+
+
+
+
+
+
+
+
+
 
 }
