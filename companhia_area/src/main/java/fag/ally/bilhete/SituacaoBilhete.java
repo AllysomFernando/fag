@@ -23,7 +23,6 @@ public class SituacaoBilhete {
 
     }
 
-
     public String getCodigo() {
         return codigo;
     }
