@@ -14,7 +14,11 @@ public class Main {
         }else if(leitor == 2){
             Subtracao.
         }else if(leitor == 3){
-            Multiplicacao
+            Multiplicacao.
+        }else if(leitor == 4){
+
+        }else{
+            System.out.println("Tente colocar um valor valido");
         }
     }
 }
