@@ -12,7 +12,9 @@ public class Main {
         if(leitor == 1){
             Somar.
         }else if(leitor == 2){
-            Subtracao
+            Subtracao.
+        }else if(leitor == 3){
+            Multiplicacao
         }
     }
 }
