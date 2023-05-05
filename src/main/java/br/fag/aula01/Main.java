@@ -10,13 +10,17 @@ public class Main {
         System.out.println("1 - Adição, 2 - Subtração, 3 - Multiplicação, 4 - Divisão");
         int leitor = scanner.nextInt();
         if(leitor == 1){
-            Somar.
+            Somar somar = new Somar();
+            somar.equal();
         }else if(leitor == 2){
-            Subtracao.
+            Subtracao subtracao = new Subtracao();
+            subtracao.equal();
         }else if(leitor == 3){
-            Multiplicacao.
+            Multiplicacao multiplicacao = new Multiplicacao();
+            multiplicacao.equal();
         }else if(leitor == 4){
-
+            Divisao divisao = new Divisao();
+            divisao.equal();
         }else{
             System.out.println("Tente colocar um valor valido");
         }
