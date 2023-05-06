@@ -13,15 +13,12 @@ public class Divisao implements OperacaoMatematica {
         int primeiroValor = verificacao(scanner);
 
         System.out.print("Digite o segundo valor (não pode ser zero ou negativo): ");
-        int segundoValor = verificacao(scanner);
+        int segundoValor = lerInteiroPositivo(scanner);
 
         int resultado = primeiroValor / segundoValor;
 
         System.out.println("O resultado da divisão é: " + resultado);
     }
-
-
-
     @Override
     public int verificacao(Scanner scanner) {
         while (!scanner.hasNextInt()) {
@@ -30,21 +27,9 @@ public class Divisao implements OperacaoMatematica {
         }
         return scanner.nextInt();
     }
-
-    private int lerInteiro(Scanner scanner) {
-        while (true) {
-            try {
-                return scanner.nextInt();
-            } catch (InputMismatchException e) {
-                System.out.print("Entrada inválida. Digite um número inteiro válido: ");
-                scanner.next();
-            }
-        }
-    }
-
     private int lerInteiroPositivo(Scanner scanner) {
         while (true) {
-            int valor = lerInteiro(scanner);
+            int valor = verificacao(scanner);
             if (valor > 0) {
                 return valor;
             } else {
@@ -52,4 +37,5 @@ public class Divisao implements OperacaoMatematica {
             }
         }
     }
+
 }
