@@ -1,37 +1,55 @@
 package br.fag.aula01;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Divisao implements OperacaoMatematica {
+
     @Override
-    public void equal() {
+    public void operacao() {
         Scanner scanner = new Scanner(System.in);
-        int primeiroValor = 0;
-        int segundoValor = 0;
-        System.out.println("Coloque o primeiro valor para fazer a operação de divisão: ");
 
+        System.out.print("Digite o primeiro valor: ");
+        int primeiroValor = verificacao(scanner);
+
+        System.out.print("Digite o segundo valor (não pode ser zero ou negativo): ");
+        int segundoValor = verificacao(scanner);
+
+        int resultado = primeiroValor / segundoValor;
+
+        System.out.println("O resultado da divisão é: " + resultado);
+    }
+
+
+
+    @Override
+    public int verificacao(Scanner scanner) {
         while (!scanner.hasNextInt()) {
             System.out.println("Entrada inválida. Por favor, digite um número inteiro válido.");
             scanner.next();
         }
-        primeiroValor = scanner.nextInt();
-        System.out.println("Coloque o segundo valor para fazer a operação de divisão: *Lembrando que um número não pode ser dividido pro zero  ou negativo");
+        return scanner.nextInt();
+    }
 
-        while (!scanner.hasNextInt()) {
-            System.out.println("Entrada inválida. Por favor, digite um número inteiro válido.");
-            scanner.next();
+    private int lerInteiro(Scanner scanner) {
+        while (true) {
+            try {
+                return scanner.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.print("Entrada inválida. Digite um número inteiro válido: ");
+                scanner.next();
+            }
         }
-        segundoValor = scanner.nextInt();
-        if(segundoValor <= 0){
-            System.out.println("Por favor coloque um númeor que não seja zero ou negativo");
-        }else {
-            int resultado = 0;
+    }
 
-            resultado = primeiroValor / segundoValor;
-
-            System.out.println("O seu resultado é: " + resultado);
+    private int lerInteiroPositivo(Scanner scanner) {
+        while (true) {
+            int valor = lerInteiro(scanner);
+            if (valor > 0) {
+                return valor;
+            } else {
+                System.out.print("Valor inválido. Digite um número positivo: ");
+            }
         }
-
     }
 }
-
