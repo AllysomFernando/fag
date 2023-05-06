@@ -14,7 +14,7 @@ public class Somar implements OperacaoMatematica {
         System.out.println("Coloque o segundo valor para fazer a operação de soma: ");
         segundoValor = verificacao(scanner);
 
-        int resultado = primeiroValor + segundoValor;
+        int resultado = (int) (primeiroValor + segundoValor);
 
 
         System.out.println("O seu resultado é: " + resultado);

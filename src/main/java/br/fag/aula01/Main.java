@@ -19,23 +19,43 @@ public class Main {
                 case 1:
                     Somar somar = new Somar();
                     somar.operacao();
+                    if(verificarSimouNao()) {
+                        main(args);
+                    }
+
                     break;
                 case 2:
                     Subtracao subtracao = new Subtracao();
                     subtracao.operacao();
+                    if (verificarSimouNao()) {
+                        main(args);
+                    }
                     break;
                 case 3:
                     Multiplicacao multiplicacao = new Multiplicacao();
                     multiplicacao.operacao();
+                    if (verificarSimouNao()) {
+                        main(args);
+                    }
                     break;
                 case 4:
                     Divisao divisao = new Divisao();
                     divisao.operacao();
+                    if (verificarSimouNao()) {
+                        main(args);
+                    }
                     break;
                 default:
                     System.out.println("Opção inválida. Por favor, escolha uma opção entre 1 e 4.");
                     break;
             }
         }
+    }
+    public static boolean verificarSimouNao(){
+
+        System.out.println("Deseja fazer uma nova operação? 1 - [S] / 2 - [N]");
+        Scanner scanner = new Scanner(System.in);
+        int leitor = scanner.nextInt();
+        return leitor == 1;
     }
 }
