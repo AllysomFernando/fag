@@ -2,8 +2,8 @@ package br.fag.aula01;
 
 import java.util.Scanner;
 
-public interface OperacaoMatematica {
+public interface OperacaoMatematica extends Verificacao {
     void operacao();
 
-    int verificacao(Scanner scanner);
+
 }

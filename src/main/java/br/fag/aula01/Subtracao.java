@@ -2,7 +2,7 @@ package br.fag.aula01;
 
 import java.util.Scanner;
 
-public class Subtracao implements OperacaoMatematica {
+public class Subtracao implements OperacaoMatematica{
     @Override
     public void operacao() {
         Scanner scanner = new Scanner(System.in);
