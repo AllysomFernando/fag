@@ -1,6 +1,5 @@
 package br.fag.aula01;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Divisao implements OperacaoMatematica {
