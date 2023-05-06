@@ -15,39 +15,36 @@ public class Principal implements Verificacao{
             System.out.println("3 - Multiplicação");
             System.out.println("4 - Divisão \n");
             leitor = verificacao(scanner);
-
             switch (leitor) {
-                case 1:
+                case 1 -> {
                     Somar somar = new Somar();
                     somar.operacao();
-                    if(verificarSimouNao()) {
+                    if (verificarSimouNao()) {
                         calculadora();
                     }
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     Subtracao subtracao = new Subtracao();
                     subtracao.operacao();
                     if (verificarSimouNao()) {
                         calculadora();
                     }
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     Multiplicacao multiplicacao = new Multiplicacao();
                     multiplicacao.operacao();
                     if (verificarSimouNao()) {
                         calculadora();
                     }
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     Divisao divisao = new Divisao();
                     divisao.operacao();
                     if (verificarSimouNao()) {
                         calculadora();
                     }
-                    break;
-                default:
-                    System.out.println("Opção inválida. Por favor, escolha uma opção entre 1 e 4.");
-                    break;
+                }
+                default -> System.out.println("Opção inválida. Por favor, escolha uma opção entre 1 e 4.");
             }
         }
     }
